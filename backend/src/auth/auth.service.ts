@@ -47,9 +47,11 @@ export class AuthService {
       throw new ForbiddenException('Email or password incorrect');
     }
     const isValid = await bcrypt.compare(dto.password, user.hashedPassword);
+    console.log(1);
     if (!isValid) {
       throw new ForbiddenException('Email or password incorrect');
     }
+    console.log(2);
     return this.generateJwt(user.id, user.email);
   }
 
@@ -59,7 +61,6 @@ export class AuthService {
       email,
     };
     const secret = this.config.get('JWT_SECRET');
-
     const token = await this.jwt.signAsync(payload, {
       expiresIn: '5min',
       secret: secret,
