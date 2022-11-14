@@ -89,32 +89,32 @@ const Home: NextPage = () => {
             description='Must be min 5 char'
             {...form.getInputProps('password')}
           />
+          <Group mt="xl" position='apart'>
+            <Anchor
+              component='button'
+              type='button'
+              size={"xs"}
+              className="text-gray-300"
+              onClick={() => {
+                setIsRegister(!isRegister);
+                setError('');
+              }}
+            >
+              {
+                isRegister ?
+                  'Have an account? Login' :
+                  "Don't have an account? Register"
+              }
+            </Anchor>
+            <Button
+              leftIcon={<IconDatabase size={14} />}
+              color="cyan"
+              type='submit'
+            >
+              {isRegister ? 'Register' : 'Login'}
+            </Button>
+          </Group>
         </form>
-        <Group mt="xl" position='apart'>
-          <Anchor
-            component='button'
-            type='button'
-            size={"xs"}
-            className="text-gray-300"
-            onClick={() => {
-              setIsRegister(!isRegister);
-              setError('');
-            }}
-          >
-            {
-              isRegister ?
-                'Have an account? Login' :
-                "Don't have an account? Register"
-            }
-          </Anchor>
-          <Button
-            leftIcon={<IconDatabase size={14} />}
-            color="cyan"
-            type='submit'
-          >
-            {isRegister ? 'Register' : 'Login'}
-          </Button>
-        </Group>
       </Layout>
     </>
   )

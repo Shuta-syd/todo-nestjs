@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import { MantineProvider } from '@mantine/core';
 import { useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools/build/types/react-query-devtools/src/devtools';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import axios from 'axios';
 import { type } from 'os';
 
