@@ -90,6 +90,31 @@ const Home: NextPage = () => {
             {...form.getInputProps('password')}
           />
         </form>
+        <Group mt="xl" position='apart'>
+          <Anchor
+            component='button'
+            type='button'
+            size={"xs"}
+            className="text-gray-300"
+            onClick={() => {
+              setIsRegister(!isRegister);
+              setError('');
+            }}
+          >
+            {
+              isRegister ?
+                'Have an account? Login' :
+                "Don't have an account? Register"
+            }
+          </Anchor>
+          <Button
+            leftIcon={<IconDatabase size={14} />}
+            color="cyan"
+            type='submit'
+          >
+            {isRegister ? 'Register' : 'Login'}
+          </Button>
+        </Group>
       </Layout>
     </>
   )
