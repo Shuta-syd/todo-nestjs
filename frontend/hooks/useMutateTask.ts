@@ -83,7 +83,5 @@ export const useMutateTask = () => {
     }
   )
 
-  return (
-    <div>useMutateTask</div>
-  )
+  return { createTaskMutation, updateTaskMutation, deleteTaskMutation };
 }
