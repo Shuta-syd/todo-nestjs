@@ -51,7 +51,7 @@ const Home: NextPage = () => {
       form.reset();
       router.push('/dashboard');
     } catch (e: any) {
-      setError(e.response.date.message);
+      setError(e.response.data.message);
     }
   }
 
