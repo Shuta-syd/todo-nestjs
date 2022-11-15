@@ -5,7 +5,7 @@ import { Task } from "@prisma/client"
 import useStore from "../store"
 import { useMutateTask } from "../hooks/useMutateTask"
 
-export const TaskItem: FC<Omit<Task, 'createdAt' | 'updateAt' | 'userID'>> = ({
+export const TaskItem: FC<Omit<Task, 'createAt' | 'updatedAt' | 'userId'>> = ({
   id,
   title,
   description,
